@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "AI Blocker for Ao3",
+  "description": "A project made to improve your browsing experience by removing slop",
+  "version": "1.0",
+  "permissions": [],
+  "host_permissions": [
+    "https://archiveofourown.org/*",
+    "https://archiveofourown.gay/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://archiveofourown.org/*", "https://archiveofourown.gay/*"],
+      "js": ["titlescan.js"],
+      "css": ["blocker.css"],
+      "run_at": "document_idle"}
+  ]
+}
