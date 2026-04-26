@@ -3,6 +3,9 @@
   "name": "AI Blocker for Ao3",
   "description": "A project made to improve your browsing experience by removing slop",
   "version": "1.0",
+  "action": {
+      "default_popup": "popup.html"
+  },
   "permissions": [],
   "host_permissions": [
     "https://archiveofourown.org/*",
