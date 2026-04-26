@@ -4,7 +4,8 @@
   "description": "A project made to improve your browsing experience by removing slop",
   "version": "1.0",
    "icons": {
-    "128": "icon.jpg"
+    "48": "icon48.png"
+    "128": "icon128.jpg"
   },
   "action": {
       "default_popup": "popup.html"
