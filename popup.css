@@ -1,0 +1,79 @@
+/*formatting originally from tricksofloki*/
+/*somewhat. i did the ao3 colormatching myself*/
+
+:root {
+    color-scheme: light dark;
+    --light-bg: ghostwhite;
+    --light-text: #000;
+
+    --dark-bg: #333;
+    --dark-text: #fff;
+    }
+
+body {
+    padding: 1.2em;
+    font-family: 'Lucida Grande', 'Lucida Sans Unicode', Verdana, Helvetica, sans-serif, 'GNU Unifont';
+}
+
+p {
+    padding: 0 0.4em;
+}
+
+button {
+    background: light-dark(#eee, #555);
+    border: 1px solid light-dark(#bbb, #222);
+    color: light-dark(#444, #eee);
+    box-shadow: inset 0 -8px 4px #232323, inset 0 8px 7px #555;
+    text-shadow: none;
+    font-weight: 400;
+    cursor: pointer;
+    }
+
+@media (prefers-color-scheme: dark) {
+    button:hover {
+        color: #999;
+        border-color: #000;
+        box-shadow: inset 2px 2px 2px #000;
+    }
+}
+
+
+@media (prefers-color-scheme: light) {
+    button {
+        box-shadow: none;
+        border-top: 1px solid var(--light-bg);
+        border-left: 1px solid var(--light-bg);
+        background-image: linear-gradient(#fff 2%,#ddd 95%, #bbb 100%);
+    }
+    button:hover {
+        color: #900;
+        border-top: 1px solid #999;
+        border-left: 1px solid #999;
+        box-shadow: inset 2px 2px 2px #bbb;
+    }
+}
+
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.button-container button {
+    border: none;
+    border-radius: 0.4em;
+    min-width: max-content;
+    padding: 0.8em;
+    margin: 0.4em;
+    flex-grow: 1;
+}
+
+
+.flex-break {
+    flex-basis: 100%;
+    height: 0;
+}
+
+button a {
+    color: light-dark(#000, #fff);
+    text-decoration: none;
+}
